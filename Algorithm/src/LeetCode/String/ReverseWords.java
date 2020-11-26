@@ -27,7 +27,7 @@ public class ReverseWords {
         // 如果最后一个是空格还会再走一步 所以有效的字符长度为cur-1
         len = space ? (cur - 1) : cur;
         if (len <= 0) return null;
-        
+
         // 翻转字符串
         reverse(chars, 0, len);
 
