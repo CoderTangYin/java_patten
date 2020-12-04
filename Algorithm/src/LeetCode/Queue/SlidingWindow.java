@@ -25,27 +25,28 @@ import java.util.Arrays;
 public class SlidingWindow {
 
     public int[] maxSlidingWindow(int[] nums, int k) {
-        if (nums == null || nums.length == 0 || k < 0) return new int[0];
+        if (nums == null || nums.length == 0 || k < 1) return new int[0];
         int[] windowMax = new int[nums.length - k + 1];
         int windowIdx = 0;
+        // [头…………尾] 从尾部进去 头部出去
         Deque<Integer> deque = new ArrayDeque<>();
         for (int i = 0; i < nums.length; i++) {
+            // 表示当前的位置已经超出了K 要把前边的删除掉
             while (!deque.isEmpty() && i - deque.peek() >= k) {
-                // 删除队列第一个元素
+                // 删除队头元素
                 deque.poll();
             }
-            // 上一个小于下一个 就让上一个出队
+            // 当前元素大于队尾元素 把队尾元素删除  未来保证队头是最大的值把队列中比当前小的全部从尾部移除
             while (!deque.isEmpty() && nums[deque.peekLast()] < nums[i]) {
-                // 删除最后一个元素
+                // 删除队尾元素
                 deque.pollLast();
             }
-            // 在队列的尾部加入
-            deque.offer(i); //
+            // 在队列的尾部加入当前索引
+            deque.offer(i);
             // 2 >= 2 也就是从数组的第三个元素开始
             if (i >= k - 1) {
-                windowMax[windowIdx++] = nums[deque.peek()]; // 获取队列第一元素
+                windowMax[windowIdx++] = nums[deque.peek()]; // 获取队头元素
             }
-
         }
         return windowMax;
 
