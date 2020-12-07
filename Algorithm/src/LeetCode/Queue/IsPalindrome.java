@@ -18,10 +18,10 @@ public class IsPalindrome {
         if (str == null) return false;
         if (str.length() == 1) return true;
         Deque<Character> queue = new ArrayDeque<>();
-        char[] chars = str.toLowerCase().toCharArray();
         boolean res = true;
-        for (int i = 0; i < chars.length; i++) {
-            queue.offer(chars[i]);
+        str = str.toLowerCase();
+        for (int i = 0; i < str.length(); i++) {
+            queue.offer(str.charAt(i));
         }
         // queue.size() > 1 是奇数的情况
         while (queue.size() > 1 && res) {
