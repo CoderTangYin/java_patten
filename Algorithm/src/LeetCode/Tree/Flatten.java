@@ -51,7 +51,7 @@ public class Flatten {
                 TreeNode oldRight = root.right;
                 root.right = root.left;
                 root.left = null;
-                // 把右节点嫁接到左子树的最右节点的右节点
+                // 把右节点嫁接到原来左子树的最右节点的右节点
                 TreeNode rightMost = root;
                 while (rightMost.right != null) {
                     rightMost = rightMost.right;
