@@ -6,6 +6,15 @@ package LeetCode;
  */
 public class SortColors {
 
+    /**
+     *
+     * 把一个数组分成3部分 0放在左边 1放在中间 2放在右边
+     *
+     * 标记收尾元素 拿一个指针从头扫描  等于0让扫描的跟左边的交换  等于1 不动 扫描的跟左边指针
+     * 都后移 大于1 拿扫描指针跟尾部交换
+     *
+     * @param nums
+     */
     public void sortColors(int[] nums) {
         int i = 0, l = 0, r = nums.length - 1;
         while (i <= r) {
