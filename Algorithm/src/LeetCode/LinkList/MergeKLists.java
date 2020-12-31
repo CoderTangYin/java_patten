@@ -59,7 +59,7 @@ public class MergeKLists {
      * @param lists
      * @return
      */
-    public ListNode mergeKLists(ListNode[] lists) {
+    public ListNode mergeKLists1(ListNode[] lists) {
         if (lists == null || lists.length == 0) return null;
         int step = 1;
         while (step < lists.length) {
