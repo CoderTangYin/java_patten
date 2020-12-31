@@ -20,10 +20,10 @@ public class LetterCombinations {
                  char s = strArr[j];
                  for (int k = 0; k < listRes.size(); k++) {
                      String temp = listRes.get(k);
-                     char s1 = temp.charAt(0);
-                     String str2 = Character.toString(s1);
+//                     char s1 = temp.charAt(0);
+//                     String str2 = Character.toString(s1);
                      String str1 = Character.toString(s);
-                     list1.add((str2+str1).replace(" ", ""));
+                     list1.add((temp+str1).replace(" ", ""));
                      System.out.println(list1);
                  }
              }
@@ -49,6 +49,6 @@ public class LetterCombinations {
 
     public static void main(String[] args) {
         LetterCombinations letterCombinations = new LetterCombinations();
-        System.out.println(letterCombinations.letterCombinations("23"));
+        System.out.println(letterCombinations.letterCombinations("234"));
     }
 }
