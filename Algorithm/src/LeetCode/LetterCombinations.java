@@ -47,8 +47,55 @@ public class LetterCombinations {
         return map;
     }
 
+
+    private char[][] lettersArray = {
+            {'a','b','c'},
+            {'d','e','f'},
+            {'j','k','l'},
+            {'m','n','o'},
+            {'p','q','r','s'},
+            {'t','u','v'},
+            {'w','x','y','z'},
+    };
+
+    private char[] chars;
+    /** 存储每层选择的字符 */
+    private char[] string;
+    private List<String> list;
+
+    public List<String> letterCombinations1(String digits) {
+        if (digits == null) return null;
+        list = new ArrayList<>();
+        chars = digits.toCharArray();
+        if (chars.length == 0) return null;
+        string = new char[chars.length];
+        dfs(0);
+        return list;
+    }
+
+    private void dfs(int idx) {
+        // 深度到达最底层
+        if (idx == chars.length) {
+            list.add(new String(string));
+            return;
+        }
+
+        // 枚举当前层可以做的选择
+        char[] letters = lettersArray[chars[idx] - '2'];
+        for (char letter: letters) {
+            // 取出当前层的一个
+            string[idx] = letter;
+            // 进入下一层
+            dfs(idx+1);
+        }
+    }
+
+
+
     public static void main(String[] args) {
         LetterCombinations letterCombinations = new LetterCombinations();
-        System.out.println(letterCombinations.letterCombinations("234"));
+//        System.out.println(letterCombinations.letterCombinations("234"));
+        System.out.println(letterCombinations.letterCombinations1("23"));
+
     }
 }
