@@ -1,4 +1,4 @@
-package LeetCode;
+package LeetCode.全排列;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,3 +71,4 @@ public class Permute { // 全排列
         System.out.println(permute.permute(new int[]{1,2,3}));
     }
 }
+
