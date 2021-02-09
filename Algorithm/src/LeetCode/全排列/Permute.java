@@ -72,3 +72,84 @@ public class Permute { // 全排列
     }
 }
 
+
+class Two {
+
+    private List<List<Integer>> resultArray;
+    private int[] nums;
+    private List<Integer> result;
+
+    public List<List<Integer>> permute(int[] nums) {
+        if (nums == null) return null;
+        resultArray = new ArrayList<>();
+        if (nums.length == 0) return resultArray;
+        this.nums = nums;
+        result = new ArrayList<>();
+        dfs(0);
+        return resultArray;
+    }
+
+
+    private void dfs(int idx) {
+        if (idx == nums.length) {
+            resultArray.add(new ArrayList<>(result));
+        }
+
+        for (int num :
+                nums) {
+            if (result.contains(num)) continue;
+            result.add(num);
+            dfs(idx+1);
+            result.remove(result.size()-1);
+        }
+    }
+
+
+    public static void main(String[] args) {
+
+    }
+}
+
+class Three {
+
+    private List<List<Integer>> resultArray;
+    private int[] nums;
+
+    public List<List<Integer>> permute(int[] nums) {
+        if (nums == null) return null;
+        resultArray = new ArrayList<>();
+        if (nums.length == 0) return resultArray;
+        this.nums = nums;
+        dfs(0);
+        return resultArray;
+    }
+
+
+    private void dfs(int idx) {
+        if (idx == nums.length) {
+            List<Integer> list = new ArrayList<>();
+            for (int n : nums) { list.add(n); }
+            resultArray.add(list);
+        }
+
+        //
+        for (int i = idx; i < nums.length; i++) {
+            swap(idx, i);
+            dfs(idx+1);
+            swap(idx, i);
+        }
+    }
+
+
+    private void swap(int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+
+
+    public static void main(String[] args) {
+        Three permute = new Three();
+        System.out.println(permute.permute(new int[]{1,2,3}));
+    }
+}
