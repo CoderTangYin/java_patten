@@ -4,13 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // 1. 创建工厂
-        FruitFactory fruitFactory = new FruitFactory();
-        // 2. 获得产品对象
-        Fruit apple = fruitFactory.getApple();
-        Fruit pear = fruitFactory.getPear();
-        // 3. 使用产品
-        apple.get();
-        pear.get();
+       //  获得苹果的抽象工厂 生产苹果  使用苹果
+       AppleFactory appleFactory = new AppleFactory();
+       Fruit apple = appleFactory.getFruit();
+       apple.get();
+
+       //
+       PearFactory pearFactory = new PearFactory();
+       Fruit pear = pearFactory.getFruit();
+       pear.get();
     }
 }
