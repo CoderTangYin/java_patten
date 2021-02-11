@@ -1,4 +1,4 @@
-package 访问者模式;
+package 访问者模式.歌手打分;
 
 public abstract class Action {
 
