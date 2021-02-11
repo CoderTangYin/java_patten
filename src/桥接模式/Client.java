@@ -9,6 +9,13 @@ public class Client {
         System.out.println("——————————————————————————————————————————");
         Client.vivoBrand();
 
+
+        /**
+         * 手机是个抽象的概念 任何手机都有相同的功能  在这个之下就会有折叠手机 滑盖
+         * 手机 相应的就会有对应的品牌 
+         *
+         */
+
     }
 
     public static void miBrand() {
