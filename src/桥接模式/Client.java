@@ -14,29 +14,29 @@ public class Client {
     public static void miBrand() {
         // 小米的折叠
         Phone miPhone = new FoldedPhone(new MiPhone());
-        Phone vivoPhone = new UpRightPhone(new VivoPhone());
+        Phone MiPhoneUp = new UpRightPhone(new MiPhone());
 
         miPhone.open();
         miPhone.call();
         miPhone.close();
 
-        vivoPhone.open();
-        vivoPhone.call();
-        vivoPhone.close();
+        MiPhoneUp.open();
+        MiPhoneUp.call();
+        MiPhoneUp.close();
     }
 
     public static void vivoBrand() {
         // vivo的折叠
-        Phone miPhone = new FoldedPhone(new VivoPhone());
-        Phone vivoPhone = new UpRightPhone(new VivoPhone());
-
-        miPhone.open();
-        miPhone.call();
-        miPhone.close();
+        Phone vivoPhone = new FoldedPhone(new VivoPhone());
+        Phone vivoPhoneUp = new UpRightPhone(new VivoPhone());
 
         vivoPhone.open();
         vivoPhone.call();
         vivoPhone.close();
+
+        vivoPhoneUp.open();
+        vivoPhoneUp.call();
+        vivoPhoneUp.close();
 
     }
 
