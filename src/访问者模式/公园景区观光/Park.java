@@ -1,4 +1,4 @@
-package 访问者模式.公园权限分工;
+package 访问者模式.公园景区观光;
 
 // 公园是个整体 包含A 跟 B
 public class Park implements ParkElement{

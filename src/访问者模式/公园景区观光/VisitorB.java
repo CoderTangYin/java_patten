@@ -1,9 +1,9 @@
-package 访问者模式.公园权限分工;
+package 访问者模式.公园景区观光;
 
 /**
- * 游客A持票访问A景区
+ * 游客B持票访问B景区
  */
-public class VisitorA implements Visitor {
+public class VisitorB implements Visitor {
     @Override
     public void visit(Park parkElement) {
 
@@ -11,11 +11,11 @@ public class VisitorA implements Visitor {
 
     @Override
     public void visit(ParkElementA parkElementA) {
-        System.out.println("游客A访问了A景区");
+
     }
 
     @Override
     public void visit(ParkElementB parkElementB) {
-
+        System.out.println("游客B访问了B景区");
     }
 }
