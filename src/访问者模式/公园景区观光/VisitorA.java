@@ -9,9 +9,10 @@ public class VisitorA implements Visitor {
 
     }
 
+    // 访问A景区 并进行签到操作
     @Override
     public void visit(ParkElementA parkElementA) {
-        System.out.println("游客A访问了A景区");
+        System.out.println("游客A访问了A景区" + parkElementA.identify);
     }
 
     @Override

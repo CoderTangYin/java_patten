@@ -5,9 +5,12 @@ package 访问者模式.公园景区观光;
  */
 public class ParkElementA implements ParkElement {
 
+    public String identify = "ParkElementA sign";
+
     // 把A部分的权限提供给访问者
     @Override
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
+
 }
