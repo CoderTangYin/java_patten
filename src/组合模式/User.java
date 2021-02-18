@@ -19,8 +19,8 @@ public class User {
         collegeComputer.add(new Department("网络工程", "网络工程不错"));
         collegeComputer.add(new Department("计算机科学与技术", "老牌专业"));
 
-        collegeComputer.add(new Department("通信工程", "通信工程不好学"));
-        collegeComputer.add(new Department("信息工程", "信息工程好学"));
+        collegeInfoEnginee.add(new Department("通信工程", "通信工程不好学"));
+        collegeInfoEnginee.add(new Department("信息工程", "信息工程好学"));
 
         // 归属学校跟院系的关系
         university.add(collegeComputer);
@@ -32,5 +32,6 @@ public class User {
 
         // 获得院系的信息
         collegeComputer.print();
+        collegeInfoEnginee.print();
     }
 }

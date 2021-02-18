@@ -1,5 +1,8 @@
 package 组合模式;
 
+/**
+ * 抽象类 主要描述组织的基本信息跟方法 以及提供给子类的属性跟方法
+ */
 public abstract class OrganizationComponent {
 
     private String name;

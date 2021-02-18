@@ -26,7 +26,9 @@ public class Person {
     }
 
     public void doM() {
+        // 因为上边的初始化是从WakeUpState开始的 后续的执行按这个链执行结束
         state.doSm(this);
+        // 整个链条执行结束了 再回到最初的状态
         state = new WakeUpState();
 
     }
