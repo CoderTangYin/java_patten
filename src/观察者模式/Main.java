@@ -13,7 +13,7 @@ public class Main {
         server.registerObserver(userZhang);
         server.registerObserver(userLi);
         server.registerObserver(userWang);
-        
+
         server.setInfomation("PHP是世界上最好用的语言！");
 
         System.out.println("----------------------------------------------");
