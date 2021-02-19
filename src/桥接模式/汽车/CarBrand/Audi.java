@@ -9,6 +9,5 @@ public class Audi implements CarBrand {
     @Override
     public void stop() {
         System.out.println("Audi 停车");
-
     }
 }
