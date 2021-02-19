@@ -17,14 +17,16 @@ public class Suv extends Car {
 
     @Override
     public void start() {
-        System.out.println("跑车打火");
+        Engine engine = super.getEngine();
+        engine.fire();
         CarBrand carBrand = super.getCarBrand();
         carBrand.start();
     }
 
     @Override
     public void stop() {
-        System.out.println("跑车熄火");
+        Engine engine = super.getEngine();
+        engine.stopFire();
         CarBrand carBrand = super.getCarBrand();
         carBrand.stop();
     }

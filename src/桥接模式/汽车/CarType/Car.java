@@ -39,6 +39,7 @@ public abstract class Car {
         this.carBrand = carBrand;
     }
 
+    // 车的基本功能
     public abstract void installEngine();
     public abstract void start();
     public abstract void stop();
