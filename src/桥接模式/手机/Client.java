@@ -1,4 +1,4 @@
-package 桥接模式;
+package 桥接模式.手机;
 
 public class Client {
     public static void main(String[] args) {

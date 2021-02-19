@@ -1,10 +1,10 @@
-package 桥接模式;
+package 桥接模式.手机;
 
 /**
- * 滑盖功能的手机
+ * 折叠功能的手机
  */
-public class UpRightPhone extends Phone {
-    public UpRightPhone(Brand brand) {
+public class FoldedPhone extends Phone {
+    public FoldedPhone(Brand brand) {
         super(brand);
     }
 
@@ -12,7 +12,7 @@ public class UpRightPhone extends Phone {
     protected void open() {
         // TODO Auto-generated method stub
         super.open();
-        System.out.println("滑盖手机 划开");
+        System.out.println("折叠手机 划开");
 
     }
 
@@ -20,7 +20,7 @@ public class UpRightPhone extends Phone {
     protected void close() {
         // TODO Auto-generated method stub
         super.close();
-        System.out.println("滑盖手机 关闭");
+        System.out.println("折叠手机 关闭");
 
     }
 
@@ -28,7 +28,7 @@ public class UpRightPhone extends Phone {
     protected void call() {
         // TODO Auto-generated method stub
         super.call();
-        System.out.println("滑盖手机 打电话");
+        System.out.println("折叠手机 打电话");
 
     }
 }

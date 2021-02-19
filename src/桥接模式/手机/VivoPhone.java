@@ -1,4 +1,4 @@
-package 桥接模式;
+package 桥接模式.手机;
 
 /**
  * vivo
