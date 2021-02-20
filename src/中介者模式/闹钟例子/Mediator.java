@@ -1,6 +1,4 @@
-package 中介者模式;
-
-import 组合模式.College;
+package 中介者模式.闹钟例子;
 
 public abstract class Mediator {
     //将给中介者对象，加入到集合中

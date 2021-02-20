@@ -1,4 +1,4 @@
-package 中介者模式;
+package 中介者模式.闹钟例子;
 import java.util.HashMap;
 
 public class ConcreteMediator extends Mediator{
