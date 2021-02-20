@@ -6,7 +6,9 @@ package 装饰者模式.动物例子;
  *
  */
 public interface ComponentAnimal {
-    public String name = "";
+
     void baseProperty();
     String getName();
+
+
 }
