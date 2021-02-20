@@ -1,6 +1,4 @@
-package 装饰者模式;
-
-import java.util.logging.Logger;
+package 装饰者模式.食品例子;
 
 public class Shop {
 
