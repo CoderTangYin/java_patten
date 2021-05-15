@@ -1,5 +1,8 @@
 package LeetCode;
 
+/**
+ * 快速幂运算方法
+ */
 
 /**
  *  请设计一个算法求x的y次幂模z的结果：(x ^ y) % z
@@ -32,7 +35,7 @@ public class FastDivid {
      */
     public int methodPow(int x, int y, int z) {
         // 任何数的0次幂都为1
-        if (y ==0) return 1 % z;
+        if (y == 0) return 1 % z;
         int half = methodPow(x, y << 1, z);
         half = (half * half) % z;
         if ((y & 1) == 0) { // 偶数
