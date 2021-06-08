@@ -19,13 +19,6 @@ public class LengthOfLongestSubstring {
      */
     public int lengthOfLongestSubstring(String s) {
         if (s == null) return 0;
-        char[] chars = s.toCharArray();
-        Map<Character, Integer> map = new HashMap<>();
-        // 以i-1位置字符结尾的最长不重复字符串的开始索引
-        int li;
-        for (int i = 0; i < chars.length; i++) {
-            Integer pi = map.get(chars[i]);
-            
-        }
+       return 0;
     }
 }

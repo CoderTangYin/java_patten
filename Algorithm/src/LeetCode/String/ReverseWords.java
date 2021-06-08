@@ -14,7 +14,7 @@ public class ReverseWords {
         int cur = 0, len = 0;
         // 默认是第一次假设遇到的第一个就是空格 下面的代码直接跳过了 不执行
         boolean space = true;
-        for (int i = 0; i < chars; i++) {
+        for (int i = 0; i < chars.length; i++) {
             char c = chars[i];
             if (c != ' ') {
                 chars[cur++] = c;

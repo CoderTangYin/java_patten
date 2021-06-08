@@ -31,4 +31,7 @@ public class ThreeSum {
         Arrays.sort(nums);
 
     }
+//    public List<List<Integer>> threeSum(int[] nums) {
+//
+//    }
 }
