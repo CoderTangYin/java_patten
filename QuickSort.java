@@ -8,6 +8,12 @@ private void sort(int begin, int end) {
 	sort(mid + 1, end);
 }
 
+/**
+*  原理： ① 取出一个轴点元素
+*		 ② 用begin位置的跟轴点比较 大于轴点的begin跟end位置的交换 结束蹦本次循环 
+*           小于的begin++
+*		 ③ 用end位置的跟轴点比较 小于轴点的 end-- 大于的end跟begin交换 结束本次循环
+*/
 private int pivotIndex(int begin, int end) {
 	int v = arr[begin];
 	end--;
