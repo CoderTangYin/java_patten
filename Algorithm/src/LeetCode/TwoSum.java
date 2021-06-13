@@ -25,6 +25,7 @@ public class TwoSum {
      * @return
      */
     public int[] twoSum(int[] nums, int target) {
+        // key : element val : idx  
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             Integer idx = map.get(target - nums[i]);
