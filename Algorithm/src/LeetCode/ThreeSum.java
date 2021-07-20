@@ -24,13 +24,13 @@ import java.util.List;
  */
 public class ThreeSum {
 
-    public List<List<Integer>> threeSum(int[] nums) {
-        if (nums == null) return null;
-        List<List<Integer>> list = new ArrayList<>();
-        if (nums.length < 3) return list;
-        Arrays.sort(nums);
-
-    }
+//    public List<List<Integer>> threeSum(int[] nums) {
+//        if (nums == null) return null;
+//        List<List<Integer>> list = new ArrayList<>();
+//        if (nums.length < 3) return list;
+//        Arrays.sort(nums);
+//
+//    }
 //    public List<List<Integer>> threeSum(int[] nums) {
 //
 //    }

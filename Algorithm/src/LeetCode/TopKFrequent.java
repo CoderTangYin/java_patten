@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 /**
 
@@ -16,7 +20,7 @@ class Solution {
     		// 让堆里有K个元素
     		if (queue.size() < k) {
     			queue.add(n);
-    		} else if (queue.peek() < K) { // 如果当前堆里最大元素比当前元素大
+    		} else if (queue.peek() < k) { // 如果当前堆里最大元素比当前元素大
     			queue.poll();
     			queue.add(n);
     		}
@@ -24,6 +28,11 @@ class Solution {
     	while(k-- > 0) {
     		list.add(queue.poll());
     	}
-    	return list;
+    	return null;
+//    	return list;
     }
+
+	public static void main(String[] args) {
+
+	}
 }
