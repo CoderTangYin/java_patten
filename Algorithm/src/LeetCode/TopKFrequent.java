@@ -1,8 +1,7 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Queue;
+package LeetCode;
 
+import java.util.*;
+import java.lang.*;
 /**
 
 Top K 问题 -> 在一堆数据里面找到前 K 大（当然也可以是前 K 小）的数
@@ -11,28 +10,38 @@ Top K 问题 -> 在一堆数据里面找到前 K 大（当然也可以是前 K �
 输出: [1,2]
 */
 class Solution {
-    public int[] topKFrequent(int[] nums, int k) {
-    	if (k > nums.length || k == 0) return nums;
-    	List<Integer> list = new ArrayList<>();
-    	// 小顶堆 堆顶会放最大元素
-    	Queue<Integer> queue = new PriorityQueue<>();
-    	for(int n: nums) {
-    		// 让堆里有K个元素
-    		if (queue.size() < k) {
-    			queue.add(n);
-    		} else if (queue.peek() < k) { // 如果当前堆里最大元素比当前元素大
-    			queue.poll();
-    			queue.add(n);
-    		}
-    	}
-    	while(k-- > 0) {
-    		list.add(queue.poll());
-    	}
-    	return null;
-//    	return list;
+    public List<Integer> topKFrequent(int[] nums, int k) {
+    	List<Integer> result = new LinkedList<>();
+    	if (k > nums.length || k == 0) return result;
+    	// 统计每个数字出现的次数
+		Map<Integer, Integer> map = new HashMap<>();
+		for (int num :nums) {
+			map.put(num, map.getOrDefault(num, 0) + 1);
+		}
+		PriorityQueue<Map.Entry<Integer, Integer>> priorityQueue = new PriorityQueue<>(
+				(Map.Entry<Integer, Integer> i1, Map.Entry<Integer, Integer> i2) -> {
+					return i1.getValue() - i2.getValue();
+				}
+		);
+
+		for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+			if (priorityQueue.size() < k) {
+				priorityQueue.offer(entry);
+			} else if (entry.getValue() > priorityQueue.peek().getValue()) {
+				// 堆顶的小鱼当前的 删除堆顶的 把当前的加进去 让堆里边始终保持2个是最大的
+				priorityQueue.poll();
+				priorityQueue.offer(entry);
+			}
+		}
+		while (!priorityQueue.isEmpty()) {
+			Map.Entry<Integer, Integer> entry = priorityQueue.poll();
+			result.add(0, entry.getKey());
+		}
+		return result;
     }
 
 	public static void main(String[] args) {
-
+		Solution solution = new Solution();
+		System.out.println(solution.topKFrequent(new int[]{1, 1, 1, 2, 2, 3}, 2));
 	}
 }
