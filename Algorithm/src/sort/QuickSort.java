@@ -48,8 +48,8 @@ public class QuickSort {
                } else {
                    array[end] = array[begin];
                    end--;
+                   break;
                }
-               break;
            }
         }
         array[begin] = pivot;
