@@ -21,7 +21,7 @@ import java.util.Map;
 public class FirstUniqChar {
     public char firstUniqChar(String s) {
         /**
-         * 思路： ①统计每个字符出现的次数
+         * 思路： ① 统计每个字符出现的次数
          *       ② 找到第一个次数为1的那个把对应的字符返回去
          */
         Map<Character, Integer> map = new HashMap<>();
